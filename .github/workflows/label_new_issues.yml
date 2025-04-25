@@ -1,0 +1,20 @@
+name: Label New Issues
+
+on:
+  issues:
+    types: 
+      - opened
+
+permissions:
+  issues: write
+
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Add "To Do" label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: To Do
