@@ -2,8 +2,7 @@ name: Label New Issues
 
 on:
   issues:
-    types: 
-      - opened
+    types: [opened]
 
 permissions:
   issues: write
